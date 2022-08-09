@@ -21,3 +21,13 @@ class Solution:
                 i += 1
                 j -= 1
         return True
+    
+    
+    # class Solution:
+    # def isPalindrome(self, head: Optional[ListNode]) -> bool:
+    #     PointerNode = head
+    #     myList = list()
+    #     while PointerNode:
+    #         myList.append(PointerNode.val)
+    #         PointerNode = PointerNode.next
+    #     return myList == list(reversed(myList))
