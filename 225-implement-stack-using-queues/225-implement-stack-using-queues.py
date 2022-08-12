@@ -4,7 +4,6 @@ class MyStack:
         self.Stack1 = []
     def push(self, x: int) -> None:
         self.Stack1.append(x)
-        print(self.Stack1)
     def pop(self) -> int:
         while len(self.Stack1)>0:
             return self.Stack1.pop()
@@ -12,7 +11,6 @@ class MyStack:
         return self.Stack1[-1]
 
     def empty(self) -> bool:
-        print(self.Stack1)
         return len(self.Stack1) ==0
 
 
