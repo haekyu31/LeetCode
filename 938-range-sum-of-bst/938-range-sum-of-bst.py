@@ -7,13 +7,13 @@
 class Solution:
     def DFS(self, Node, low, high):
         if not Node:
-            return
+            return 0
+        Myreturn = 0
         if Node.val >=low and Node.val<=high:
-            self.Answer += Node.val
-            
-        self.DFS(Node.left, low, high)
-        self.DFS(Node.right, low, high)
+            Myreturn += Node.val
+        Myreturn += self.DFS(Node.left, low, high)
+        Myreturn += self.DFS(Node.right, low, high)
+        return Myreturn
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
-        self.Answer = 0
-        self.DFS(root, low, high)
-        return self.Answer
+        return self.DFS(root, low, high)
+    
