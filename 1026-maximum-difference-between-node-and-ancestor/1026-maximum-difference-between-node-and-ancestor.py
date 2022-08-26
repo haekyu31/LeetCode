@@ -16,7 +16,7 @@ class Solution:
         
         self.DFS(Node.left, low, high)
         self.DFS(Node.right, low, high)
-        return #max(self.Answer)
+        return
     def maxAncestorDiff(self, root: Optional[TreeNode]) -> int:
         self.Max, self.Min = -1, 10**5+1
         self.Answer =[]
