@@ -18,7 +18,7 @@ class Solution:
                     self.DFS(grid,idx_x, idx_y)
                     self.island.append(self.Count)
                     self.Count = 0
-        print(self.island)
+        # print(self.island)
         if not self.island:
             return 0
         return max(self.island)
