@@ -13,7 +13,7 @@ class Solution:
             low = Node.val
         if Node.val > high:
             high = Node.val
-        print(f'Node : {Node.val}, high : {high}, low : {low}, Answer : {self.Answer}')
+        
         self.DFS(Node.left, low, high)
         self.DFS(Node.right, low, high)
         return #max(self.Answer)
