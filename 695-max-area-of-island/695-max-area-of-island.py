@@ -12,12 +12,13 @@ class Solution:
         self.island = []
         self.Count = 0
         self.y, self.x = len(grid), len(grid[0])
-        for idx_x in range(self.x):
-            for idx_y in range(self.y):
+        for idx_y in range(self.y):
+            for idx_x in range(self.x):
                 if grid[idx_y][idx_x] == 1:
                     self.DFS(grid,idx_x, idx_y)
                     self.island.append(self.Count)
                     self.Count = 0
+        print(self.island)
         if not self.island:
             return 0
         return max(self.island)
