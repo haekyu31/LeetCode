@@ -6,20 +6,16 @@
 #         self.right = right
 class Solution:
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
-        visited = []
+        queue = [root]
         node_sum = 0
-        visited.append(root)
-        while True:
-            n = len(visited)
-            if n<= 0 :
-                break
-            if n>0:
-                node = visited.pop(0)
-                if low <=node.val<=high:
-                    node_sum +=node.val
-                if node.left:
-                    visited.append(node.left)
-                if node.right:
-                    visited.append(node.right)
-                n -= 1
+        if not root:
+            return
+        while queue:
+            value = queue.pop(0)
+            if low<= value.val <=high:
+                node_sum += value.val
+            if value.left:
+                queue.append(value.left)
+            if value.right:
+                queue.append(value.right)
         return node_sum
