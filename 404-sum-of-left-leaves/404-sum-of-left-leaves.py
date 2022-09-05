@@ -6,13 +6,13 @@
 #         self.right = right
 class Solution:
     def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
-        print(f'root: {root}')
+        # print(f'root: {root}')
         queue = [root]
         node_sum = 0
         if not root:
             return 
         while queue:
-            print([Idx.val for Idx in queue])
+            # print([Idx.val for Idx in queue])
             value = queue.pop(0)
             if value.left:
                 queue.append(value.left)
