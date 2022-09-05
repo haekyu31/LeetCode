@@ -13,7 +13,7 @@ class Solution:
             return []
         Digits = list(digits)
         self.Answer = []
-        self.DFS(Digits[:],[])
+        self.DFS(Digits,[])
         
         return self.Answer
         
