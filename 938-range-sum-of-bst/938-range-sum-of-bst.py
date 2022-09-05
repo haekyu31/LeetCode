@@ -5,15 +5,21 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def DFS(self, Node, low, high):
-        if not Node:
-            return 0
-        Myreturn = 0
-        if Node.val >=low and Node.val<=high:
-            Myreturn += Node.val
-        Myreturn += self.DFS(Node.left, low, high)
-        Myreturn += self.DFS(Node.right, low, high)
-        return Myreturn
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
-        return self.DFS(root, low, high)
-    
+        visited = []
+        node_sum = 0
+        visited.append(root)
+        while True:
+            n = len(visited)
+            if n<= 0 :
+                break
+            if n>0:
+                node = visited.pop(0)
+                if low <=node.val<=high:
+                    node_sum +=node.val
+                if node.left:
+                    visited.append(node.left)
+                if node.right:
+                    visited.append(node.right)
+                n -= 1
+        return node_sum
