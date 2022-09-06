@@ -7,7 +7,6 @@ class Solution:
             return strs[0]
         strs.sort()
         end = min(len(strs[0]), len(strs[n - 1]))
-        print(end)
         i = 0
         while (i < end and
                strs[0][i] == strs[n - 1][i]):
