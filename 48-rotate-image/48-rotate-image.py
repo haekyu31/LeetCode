@@ -8,5 +8,3 @@ class Solution:
             for j in range(i, len(mat)):
                 mat[i][j], mat[j][i] = mat[j][i], mat[i][j]
             mat[i].reverse()
-        # for i in range(len(mat)):
-        #     mat[i].reverse()
