@@ -7,8 +7,7 @@ class MyStack:
         self.MyStack.append(x)
 
     def pop(self) -> int:
-        while self.MyStack:
-            return self.MyStack.pop()   
+        return self.MyStack.pop()   
 
     def top(self) -> int:
         return self.MyStack[-1]
