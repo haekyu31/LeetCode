@@ -1,7 +1,15 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        anagrams = collections.defaultdict(list)
+        sorted_list = [''.join(sorted(str)) for str in strs]
+        # print(sorted_list)
+        sorted_unique = list(set(sorted_list))
+        # print(sorted_unique)
         
-        for word in strs:
-            anagrams[''.join(sorted(word))].append(word)
-        return list(anagrams.values())
+        answer = []
+        for i in range(len(sorted_unique)):
+            answer.append([])
+        # print(answer)
+        for i in range(len(sorted_list)):
+            answer[sorted_unique.index(sorted_list[i])].append(strs[i])
+        # print(answer)
+        return answer
