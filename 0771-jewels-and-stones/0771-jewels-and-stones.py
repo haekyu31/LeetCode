@@ -1,12 +1,13 @@
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
-        freqs = collections.Counter(stones)
-        count = 0
+        return sum(stone in jewels for stone in stones)
+#         freqs = collections.Counter(stones)
+#         count = 0
         
-        for char in jewels:
-            count += freqs[char]
-        return count
-#         freqs = {}
+#         for char in jewels:
+#             count += freqs[char]
+#         return count
+# #         freqs = {}
 #         count = 0
         
 #         # 돌의 빈도 수 계산
